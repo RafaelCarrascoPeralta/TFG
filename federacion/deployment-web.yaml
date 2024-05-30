@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: rafacarrascoperalta/federacion:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: DB_HOST
+          value: "localhost"
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASSWORD
+          value: ""
+        - name: DB_NAME
+          value: "federacion"
