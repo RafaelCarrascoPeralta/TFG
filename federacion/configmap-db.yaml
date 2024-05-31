@@ -76,6 +76,17 @@ data:
     ('77777777D', 'CB SANTA FE', 'RAUL', 'MERINO GARCIA', '2002-09-25', 'Pivot', 7),
     ('77777777E', 'CB SANTA FE', 'DIEGO', 'VILLANUEVA', '2000-05-25', 'Alero', 17);
 
+    CREATE TABLE `partidos` (
+      `jornada` varchar(20) NOT NULL,
+      `nombre_equipo` varchar(30) NOT NULL,
+      `dia` varchar(10) NOT NULL,
+      `hora` varchar(5) NOT NULL,
+      `visitante` varchar(30) NOT NULL,
+      `lugar` varchar(50) NOT NULL,
+      `resultados` varchar(7) NOT NULL,
+      `cod_partido` int(5) NOT NULL
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
     INSERT INTO `partidos` (`jornada`, `nombre_equipo`, `dia`, `hora`, `visitante`, `lugar`, `resultados`, `cod_partido`) VALUES
     ('Jornada 1', 'CAB ATARFE', '2024-05-04', '13:00', 'CB AGUSTINOS', 'POLIDEPORTIVO MUNICIPAL DE ATARFE', '45 - 68', 2),
     ('Jornada 1', 'CB ALHOTUR', '2024-05-05', '12:30', 'CB RACA', 'PABELLON MUNICIPAL DE ALHOTUR', '80 - 72', 3),
