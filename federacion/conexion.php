@@ -1,5 +1,5 @@
 <?php
-    $servidor="localhost";
+    $servidor="mysql-service";
     $usuario="root";
     $passw="";
 
