@@ -37,7 +37,7 @@ if ($stmt = $conexion->prepare($sql_admin)) {
         if (password_verify($contraseña, $row['contraseña'])) {
             // Redireccionar si la contraseña es correcta
             header("Location: /admin/index.php");
-            exit();
+            exit(); // Asegura que el script se detenga después de la redirección
         } else {
             // Mostrar mensaje de error si la contraseña es incorrecta
             echo "<div id='content'>";
@@ -60,6 +60,10 @@ if ($stmt = $conexion->prepare($sql_admin)) {
 
 // Cerrar la conexión
 $conexion->close();
+
+include "footer.php";
+?>
+
 
 include "footer.php";
 ?>
