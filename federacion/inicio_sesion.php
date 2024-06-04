@@ -16,34 +16,41 @@ if ($conexion->connect_error) {
 }
 
 // Consulta SQL
-$sql_admin = "SELECT * FROM administrador WHERE usuario = ? AND contraseña = ?";
+$sql_admin = "SELECT * FROM administrador WHERE usuario = ?";
 
 // Preparar la consulta
 if ($stmt = $conexion->prepare($sql_admin)) {
     // Enlazar parámetros
-    $stmt->bind_param("ss", $usu, $contraseña);
+    $stmt->bind_param("s", $usu);
 
     // Ejecutar la consulta
     $stmt->execute();
 
     // Obtener el resultado
     $result = $stmt->get_result();
-    ?>
 
-    <div id="content">
-    <?php
     if ($result->num_rows > 0) {
-        // Redireccionar si se encuentra el usuario
-        header("Location: /admin/index.php");
-        exit();
-    } else {
-        // Mostrar mensaje de error si no se encuentra el usuario
-        echo "<p>Error: usuario o contraseña incorrectos.</p>";
-    }
-    ?>
-    </div>
+        // Obtener el primer resultado
+        $row = $result->fetch_assoc();
 
-    <?php
+        // Verificar la contraseña
+        if (password_verify($contraseña, $row['contraseña'])) {
+            // Redireccionar si la contraseña es correcta
+            header("Location: /admin/index.php");
+            exit();
+        } else {
+            // Mostrar mensaje de error si la contraseña es incorrecta
+            echo "<div id='content'>";
+            echo "<p>Error: contraseña incorrecta.</p>";
+            echo "</div>";
+        }
+    } else {
+        // Mostrar mensaje de error si el usuario no se encuentra
+        echo "<div id='content'>";
+        echo "<p>Error: usuario no encontrado.</p>";
+        echo "</div>";
+    }
+
     // Cerrar la declaración
     $stmt->close();
 } else {
@@ -53,9 +60,6 @@ if ($stmt = $conexion->prepare($sql_admin)) {
 
 // Cerrar la conexión
 $conexion->close();
-?>
 
-<?php
 include "footer.php";
 ?>
-
