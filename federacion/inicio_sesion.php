@@ -63,7 +63,3 @@ $conexion->close();
 
 include "footer.php";
 ?>
-
-
-include "footer.php";
-?>
