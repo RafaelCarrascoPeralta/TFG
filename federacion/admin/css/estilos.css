@@ -1,0 +1,304 @@
+/* BODY */
+
+body {background-size: 100%;
+    margin: auto;
+    background-color: #F9F8BB;}
+
+/* HEADER */
+
+div#logo_cabecera {margin: auto;
+                    width: 1200px;
+                    text-align: center;
+                    background-color: black;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;}
+
+/* Estilos para el menú de navegación */
+div#navegador {
+    margin: auto;
+    width: 1200px;
+    height: 50px;
+    background-color: black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+div#nav_menu {
+    width: 230px;
+    height: 50px;
+    float: left;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* Reducir el tamaño de fuente para adaptarse mejor */
+    line-height: 50px; /* Centrar verticalmente el texto */
+    margin-left: 15px;
+    display: inline-block; /* Alinear los elementos en línea */
+    transition: background-color 0.3s; /* Añadir una transición suave al color de fondo */
+    border-radius: 25px;
+}
+
+a img {
+    vertical-align: middle; /* Alinear verticalmente los íconos con el texto */
+    margin-right: 5px; /* Agregar un pequeño espacio entre el ícono y el texto */
+}
+
+div#nav_menu:hover a {
+    background-color: rgb(69, 67, 67); /* Cambiar el color de fondo al pasar el mouse sobre los enlaces */
+}
+
+
+/* PIE DE PAGINA */
+
+div#pie_pagina {margin: auto;
+    background-color: black;
+    width: 1200px;
+    height: 220px;
+    border-radius: 10px;}
+
+div#pie_pagina p {color: white;}
+
+div#datos {width: 396px;
+float: left;
+text-align: center;
+margin-bottom: 35px;}
+
+div#instituto {width: 426px;
+float: left;
+text-align: center;
+margin-top: 35px;}
+
+div#redes {width: 366px;
+float: left;
+text-align: center;
+margin-top: 35px;}
+
+div#pie_pagina p {font-weight: bold;}
+
+div#pie_pagina a:hover {width: 75px;}
+
+div#redes { overflow: hidden;}
+
+div#redes img {border-radius: 50px;
+    background-color: transparent;}
+   
+
+/* INICIO */
+
+div#admin {
+    margin: auto;
+    width: 1200px; 
+    text-align: right;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div#admin a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-right: 20px; /* Espacio entre el enlace y el formulario */
+}
+
+div#admin img {
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+form#cerrar_sesion input[type="submit"] {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+form#cerrar_sesion input[type="submit"]:hover {
+    background-color: #e0e0e0;
+}
+
+
+div#cabecera {
+    margin: auto;
+    width: 1200px; 
+    background-color: orange;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Estilo para el texto dentro de div#cabecera */
+div#cabecera h2 {
+    margin: 0; 
+    padding: 10px; 
+    color: rgb(255, 255, 255); 
+}
+        
+
+div#contenido {width: 1200px;
+                height: 800px;
+                margin: auto;
+                border-radius: 10px;
+                background-color: #FFFFFF;}
+
+div#descripcion {width: 794px;
+                    height: 794px;
+                    float: left;
+                    border-bottom-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    border-color: rgb(32, 29, 29);
+                    border-style: solid;}
+
+div#noticias {width: 394px;
+                    height: 794px;
+                    float: left;
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    border-color: rgb(32, 29, 29);
+                    border-style: solid;
+                    background-color: rgb(255, 238, 220);}
+                
+div#titulo_not {width: 394px;
+                    height: 40px;
+                    margin-top: -20px;
+                    text-align: center;
+                    background-color: bisque;}
+
+h2.tit_not {margin-top: -8px;
+                margin-left: 60px;}
+           
+            
+div#img_item {width: 394px;
+                height: 400px;
+                padding-top: 25px;}
+                    
+            
+img.imagen {margin-left: 45px;
+            margin-top: 25px;}
+
+p.boton_item {width: 210px;
+                height: 60px;
+                background-color: #808080;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                margin-top: -30px;
+                margin-left: 85px;}
+
+p.boton_item:hover {background-color: #796c18;}
+
+/* DEMAS PAGINAS */
+
+div#content_equipos {width: 1200px;
+                margin: auto;
+                border-radius: 10px;
+                border-style: solid;
+                border-color: #000000;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(255, 246, 220);}
+            
+
+p.boton_equi {width: 210px;
+                height: 60px;
+                background-color: #808080;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                margin-left: 85px;}
+            
+
+div#boton1 {width: 250px;
+            height: 125px;
+            float: left;}
+
+div#boton2 {width: 350px;
+            height: 125px;
+            float: left;}
+            
+
+/* ALTA */
+
+div#formulario {width: 800px;}
+            
+div#content {width: 1200px;
+                    height: 800px;
+                    margin: auto;
+                    border-radius: 10px;
+                    border-style: solid;
+                    border-color: #000000;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    background-color: rgb(255, 246, 220);}
+
+div#mensaje {
+    width: 400px;
+    padding: 20px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+            
+
+
+/* TABLAS */
+
+/* Estilo general para todas las tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para las celdas de encabezado */
+th {
+    background-color: #d68708;
+    color: white;
+    font-weight: bold;
+    padding: 8px; /* Aumenta el padding para hacer más espacio */
+    text-align: left;
+    border: 1px solid #d68708; /* Añade un borde para separar los encabezados */
+}
+
+/* Estilo para las celdas de datos */
+td {
+    padding: 10px; /* Aumenta el padding para hacer más espacio */
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+/* Estilo para filas impares */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para filas al pasar el ratón */
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para los datos */
+td {
+    font-weight: bold; /* Hace que los datos aparezcan en negrita */
+    color: #333; /* Cambia el color del texto para que sea más legible */
+}
+
+  
