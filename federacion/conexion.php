@@ -1,7 +1,7 @@
 <?php
-    $servidor="localhost";
+    $servidor="mysql-service";
     $usuario="root";
-    $passw="";
+    $passw="admin";
 
     $conexion = new mysqli($servidor, $usuario, $passw, $basededatos);
 
