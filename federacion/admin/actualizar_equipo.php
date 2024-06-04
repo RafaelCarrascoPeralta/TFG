@@ -3,7 +3,7 @@
 ?>
     <div id=admin>
                         <a href="index.php"><img src=".\imagen\admin.png" width="25px">Admin</a>
-                        <form id="cerrar_sesion" action="/federacion/index.php" method="post" enctype="multipart/form-data">
+                        <form id="cerrar_sesion" action="index.php" method="post" enctype="multipart/form-data">
                             <input type="submit" name="enviar" value="Cerrar Sesion">
                         </form>
               
