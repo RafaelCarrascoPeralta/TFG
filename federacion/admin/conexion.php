@@ -1,11 +1,14 @@
 <?php
-    $servidor="mysql-service";
-    $usuario="root";
-    $passw="admin";
+$servidor = "mysql-service";
+$usuario = "root";
+$passw = "admin";
 
-    $conexion = new mysqli($servidor, $usuario, $passw, $basededatos);
+// Nombre de la base de datos
+$basededatos = "federacion";
 
-    if ($conexion->connect_error) {
-        die("La conexión fallo: 0" . $conexion->$connect_error);
-    }
+$conexion = new mysqli($servidor, $usuario, $passw, $basededatos);
+
+if ($conexion->connect_error) {
+    die("La conexión falló: " . $conexion->connect_error);
+}
 ?>
