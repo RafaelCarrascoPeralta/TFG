@@ -36,7 +36,7 @@ if ($stmt = $conexion->prepare($sql_admin)) {
         // Verificar la contraseña
         if (password_verify($contraseña, $row['contraseña'])) {
             // Redireccionar si la contraseña es correcta
-            header("Location: /admin/index.php");
+            header("Location:admin/index.php");
             exit(); // Asegura que el script se detenga después de la redirección
         } else {
             // Mostrar mensaje de error si la contraseña es incorrecta
