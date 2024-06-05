@@ -1,5 +1,5 @@
 <?php
-    include "header.php"
+    include "admin/header.php"
 ?>
     <div id=admin>
                         <a href="#"><img src=".\imagen\admin.png" width="25px">Admin</a>
@@ -36,5 +36,5 @@
         </div>
     </div>
 <?php
-    include "footer.php"
+    include "admin/footer.php"
 ?>
