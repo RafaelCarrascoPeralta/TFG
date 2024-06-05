@@ -10,6 +10,9 @@ $basededatos = "federacion";
 // Incluir y verificar la conexión
 include "conexion.php";
 
+<div id=content>
+<div id=mensaje>
+
 // Verificar si la conexión fue exitosa
 if ($conexion->connect_error) {
     die("Falló la conexión: " . $conexion->connect_error);
@@ -36,7 +39,7 @@ if ($stmt = $conexion->prepare($sql_admin)) {
         // Verificar la contraseña
         if (password_verify($contraseña, $row['contraseña'])) {
             // Redireccionar si la contraseña es correcta
-            header("Location:./admin/index.php");
+            header("Location:/var/www/html/admin/index.php");
             exit(); // Asegura que el script se detenga después de la redirección
         } else {
             // Mostrar mensaje de error si la contraseña es incorrecta
@@ -57,6 +60,9 @@ if ($stmt = $conexion->prepare($sql_admin)) {
     // Mostrar mensaje de error si la preparación de la consulta falla
     die("Error en la preparación de la consulta: " . $conexion->error);
 }
+
+</div id=content>
+</div id=mensaje>
 
 // Cerrar la conexión
 $conexion->close();
