@@ -25,6 +25,9 @@
             <div id="nav_menu">
                 <a href="clasificacion.php"><img src="./imagen/clasificacion.png" width="25px">Clasificacion</a>
             </div>
+            <div id=nav_menu>
+                <a href="modificacion.php"><img src=".\imagen\actualizar.png" width="25px">Modificacion partidos</a>
+            </div>
         </div>
     </header>
 
