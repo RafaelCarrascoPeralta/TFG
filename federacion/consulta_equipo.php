@@ -1,6 +1,14 @@
 <?php
     include "header.php"
 ?>
+    <div id=sesion>
+        <label for="dni">Usuario:</label><br>
+        <input type="text" name="usuario" value="" required>
+        <label for="dni">Contraseña:</label><br>
+        <input type="password" name="contraseña" value="" required>
+        <input type="submit" name="enviar" value="Iniciar sesión">
+    </div>div>
+
     <div id=cabecera>
         <h2>CONSULTA PARTIDOS</h2>
     </div>
