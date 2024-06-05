@@ -11,7 +11,6 @@
         <input type="submit" name="enviar" value="Iniciar sesión">
     
     </div>
-    
 
 <div id=cabecera>
     <h2>CLASIFICACION</h2>
