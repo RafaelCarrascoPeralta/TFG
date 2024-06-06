@@ -1,27 +1,22 @@
 <?php
-    include "header.php";
+// Manejar la lógica de eliminación antes de incluir cualquier HTML
 
-    $basededatos="federacion";
+$basededatos = "federacion";
+include "conexion.php";
 
-    include "conexion.php";
+$partidoborrar = $_GET['cod_partido'];
+$borrar = "DELETE FROM partidos WHERE cod_partido='$partidoborrar'";
+mysqli_query($conexion, $borrar);
 
+// Redireccionar después de la eliminación
+header("Location: modificacion.php");
+exit();
 ?>
 
-<div id=contenido>
+<?php include "header.php"; ?>
 
-<?php
-
-    $partidoborrar=$_GET['cod_partido'];
-    $borrar="DELETE FROM partidos WHERE cod_partido='$partidoborrar'";
-    mysqli_query($conexion,$borrar);
-    header("Location:modificacion.php");
-
-?>
-
-
+<div id="contenido">
+    <p>El partido ha sido eliminado.</p>
 </div>
 
-<?php
-    include "footer.php";
-
-?>
+<?php include "footer.php"; ?>
