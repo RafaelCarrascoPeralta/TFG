@@ -9,9 +9,11 @@ $basededatos = "federacion";
 
 // Incluir y verificar la conexión
 include "conexion.php";
+?>
 
 <div id=content>
 <div id=mensaje>
+<?php
 
 // Verificar si la conexión fue exitosa
 if ($conexion->connect_error) {
@@ -61,11 +63,15 @@ if ($stmt = $conexion->prepare($sql_admin)) {
     die("Error en la preparación de la consulta: " . $conexion->error);
 }
 
-</div id=content>
-</div id=mensaje>
+
 
 // Cerrar la conexión
 $conexion->close();
+?>
+</div id=content>
+</div id=mensaje>
+<?php
 
 include "footer.php";
+
 ?>
