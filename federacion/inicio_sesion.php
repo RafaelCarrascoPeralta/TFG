@@ -41,13 +41,17 @@ if ($stmt = $conexion->prepare($sql_admin)) {
         } else {
             // Mostrar mensaje de error si la contraseña es incorrecta
             echo "<div id='content'>";
+            echo "<div id='mensaje'>";
             echo "<p>Error: contraseña incorrecta.</p>";
+            echo "</div>";
             echo "</div>";
         }
     } else {
         // Mostrar mensaje de error si el usuario no se encuentra
         echo "<div id='content'>";
+        echo "<div id='mensaje'>";
         echo "<p>Error: usuario no encontrado.</p>";
+        echo "</div>";
         echo "</div>";
     }
 
