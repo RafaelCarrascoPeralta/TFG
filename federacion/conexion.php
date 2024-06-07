@@ -1,5 +1,5 @@
 <?php
-    $servidor="mysql-service";
+    $servidor="mysql-service.default.svc.cluster.local";
     $usuario="root";
     $passw="admin";
     $basededatos = "federacion"; // Añadí el nombre de la base de datos aquí
