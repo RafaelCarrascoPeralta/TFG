@@ -1,8 +1,8 @@
 <?php
-    $servidor="mysql-service.default.svc.cluster.local";
+    $servidor="mysql-service";
     $usuario="root";
     $passw="admin";
-    $basededatos = "federacion"; // Añadí el nombre de la base de datos aquí
+    $basededatos = "federacion";
 
     $conexion = new mysqli($servidor, $usuario, $passw, $basededatos);
 
