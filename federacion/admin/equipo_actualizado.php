@@ -77,11 +77,20 @@
 
             if ($errores == 0) {
                 $nombreimagen = $directoriosubida . $nombrearchivo;
-                move_uploaded_file($directoriotemp, $nombreimagen);
                 $directoriosubida2 = "admin/imagen/";
                 $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
-                copy($nombreimagen, $nombreimagen2);
+            
+                // Mover la imagen al primer directorio
+                if (move_uploaded_file($directoriotemp, $nombreimagen)) {
+                    // Copiar la imagen al segundo directorio
+                    if (!copy($nombreimagen, $nombreimagen2)) {
+                        echo "Error al copiar la imagen al directorio admin/imagen/";
+                    }
+                } else {
+                    echo "Error al mover la imagen al directorio imagen/";
             }
+        }
+
 
         }
 
