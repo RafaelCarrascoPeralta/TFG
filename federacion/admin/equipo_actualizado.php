@@ -78,7 +78,7 @@
             if ($errores == 0) {
                 $nombreimagen = $directoriosubida . $nombrearchivo;
                 move_uploaded_file($directoriotemp, $nombreimagen);
-                directoriosubida2 = "admin/imagen/";
+                $directoriosubida2 = "admin/imagen/";
                 $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
                 copy($nombreimagen, $nombreimagen2);
             }
