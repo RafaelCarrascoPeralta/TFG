@@ -50,7 +50,7 @@
         } else {
 
 
-            $directoriosubida = "/var/www/html/imagen/";
+            $directoriosubida = "imagen/";
             $max_file_size = "5120000";
             $extensionesvalidas = array("jpg", "png", "gif");
 
@@ -78,7 +78,7 @@
             if ($errores == 0) {
                 $nombreimagen = $directoriosubida . $nombrearchivo;
                 move_uploaded_file($directoriotemp, $nombreimagen);
-                directoriosubida2 = "/var/www/html/admin/imagen/";
+                directoriosubida2 = "admin/imagen/";
                 $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
                 copy($nombreimagen, $nombreimagen2);
             }
