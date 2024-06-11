@@ -5,9 +5,9 @@
         <form id=inicio_ses action="inicio_sesion.php" method="post" enctype="multipart/form-data">
         
         <label for="dni">Usuario:</label><br>
-        <input type="text" name="usuario" value="" required>
+        <input type="text" name="usuario" value="">
         <label for="dni">Contraseña:</label><br>
-        <input type="password" name="contraseña" value="" required>
+        <input type="password" name="contraseña" value="">
         <input type="submit" name="enviar" value="Iniciar sesión">
     
     </div>
