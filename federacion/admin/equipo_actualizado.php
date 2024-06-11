@@ -87,7 +87,7 @@ if ($nombrearchivo == "") {
         }
     }
 
-    $modificar = "UPDATE equipos SET localidad='$localidad', dia_partido='$dia', hora_partido='$hora', color_equipacion='$color', lugar_partido='$lugar', correo='$correo', logo='../imagen/$nombrearchivo' where nombre_equipo='$nombre'";
+    $modificar = "UPDATE equipos SET localidad='$localidad', dia_partido='$dia', hora_partido='$hora', color_equipacion='$color', lugar_partido='$lugar', correo='$correo', logo='/imagen/$nombrearchivo' where nombre_equipo='$nombre'";
     $resultado = mysqli_query($conexion, $modificar);
     
     if ($resultado) {
