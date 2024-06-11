@@ -56,43 +56,45 @@
 
             $nombrecompleto = "";
 
-        if (isset($_FILES['imagen'])) {
-            $errores = 0;
-            $nombrearchivo = $_FILES['imagen']['name'];
-            $filesize = $_FILES['imagen']['size'];
-            $directoriotemp = $_FILES['imagen']['tmp_name'];
-            $tipoarchivo = $_FILES['imagen']['type'];
-            $arrayarchivo = pathinfo($nombrearchivo);
-            $extension = $arrayarchivo['extension'];
+if (isset($_FILES['imagen'])) {
+    $errores = 0;
+    $nombrearchivo = $_FILES['imagen']['name'];
+    $filesize = $_FILES['imagen']['size'];
+    $directoriotemp = $_FILES['imagen']['tmp_name'];
+    $tipoarchivo = $_FILES['imagen']['type'];
+    $arrayarchivo = pathinfo($nombrearchivo);
+    $extension = $arrayarchivo['extension'];
 
-            if (!in_array($extension, $extensionesvalidas)) {
-                echo "La extensión no es válida";
-                $errores = 1;
-            }
+    if (!in_array($extension, $extensionesvalidas)) {
+        echo "La extensión no es válida";
+        $errores = 1;
+    }
 
-            if ($filesize > $max_file_size) {
-                echo "La imagen excede el máximo tamaño permitido";
-                $errores = 1;
-            }
+    if ($filesize > $max_file_size) {
+        echo "La imagen excede el máximo tamaño permitido";
+        $errores = 1;
+    }
 
-            if ($errores == 0) {
-                $nombreimagen = $directoriosubida . $nombrearchivo;
-                $directoriosubida2 = "admin/imagen/";
-                $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
-            
-                // Mover la imagen al primer directorio
-                if (move_uploaded_file($directoriotemp, $nombreimagen)) {
-                    // Copiar la imagen al segundo directorio
-                    if (!copy($nombreimagen, $nombreimagen2)) {
-                        echo "Error al copiar la imagen al directorio admin/imagen/";
-                    }
-                } else {
-                    echo "Error al mover la imagen al directorio imagen/";
+    if ($errores == 0) {
+        $directorioraiz = '/var/www/html/'; // Ruta absoluta del directorio raíz de tu aplicación
+        $directoriosubida = $directorioraiz . "imagen/";
+        $nombreimagen = $directoriosubida . $nombrearchivo;
+
+        $directoriosubida2 = $directorioraiz . "admin/imagen/";
+        $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
+
+        // Mover la imagen al primer directorio
+        if (move_uploaded_file($directoriotemp, $nombreimagen)) {
+            // Copiar la imagen al segundo directorio
+            if (!copy($nombreimagen, $nombreimagen2)) {
+                echo "Error al copiar la imagen al directorio admin/imagen/";
             }
+        } else {
+            echo "Error al mover la imagen al directorio imagen/";
         }
+    }
+}
 
-
-        }
 
     $modificar = "UPDATE equipos SET localidad='$localidad', dia_partido='$dia', hora_partido='$hora', color_equipacion='$color', lugar_partido='$lugar', correo='$correo', logo='$nombreimagen' where nombre_equipo='$nombre'";
     $resultado = mysqli_query($conexion, $modificar);
