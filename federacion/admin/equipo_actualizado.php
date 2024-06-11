@@ -42,7 +42,7 @@ if ($nombrearchivo == "") {
     }
 } else {
     $directoriosubida = "../imagen/";
-    $directoriosubida2 = "admin/imagen/";
+    $directoriosubida2 = "imagen/";
     $max_file_size = 5120000;
     $extensionesvalidas = array("jpg", "png", "gif");
 
