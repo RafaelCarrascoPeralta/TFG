@@ -1,16 +1,6 @@
 <?php
     include "header.php"
 ?>
-    <div id=sesion>
-        <form id=inicio_ses action="inicio_sesion.php" method="post" enctype="multipart/form-data">
-        
-        <label for="dni">Usuario:</label><br>
-        <input type="text" name="usuario" value="">
-        <label for="dni">Contraseña:</label><br>
-        <input type="password" name="contraseña" value="">
-        <input type="submit" name="enviar" value="Iniciar sesión">
-    
-    </div>
     <div id=cabecera>
         <h2>CONSULTA PARTIDOS</h2>
     </div>
