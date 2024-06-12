@@ -1,5 +1,5 @@
 <?php
-$servidor = "3.236.135.94";
+$servidor = "3.239.110.176";
 $usuario = "root";
 $passw = "admin";
 
