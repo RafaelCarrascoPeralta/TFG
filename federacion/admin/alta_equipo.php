@@ -56,7 +56,6 @@ include "conexion.php";
 
                     // Copiar la imagen al segundo directorio
                     if (copy($nombreimagen, $nombreimagen2)) {
-                        // Aquí va el cierre de llave que falta
                     } else {
                         echo "Error al copiar la imagen";
                         error_log("Error al copiar la imagen: " . error_get_last()['message']);
