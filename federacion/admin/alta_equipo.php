@@ -28,8 +28,9 @@
 
     <?php
 
-    $directoriosubida = "imagen/";
-    $max_file_size = "5120000";
+    $directoriosubida = "../imagen/";
+    $directoriosubida2 = "imagen/";
+    $max_file_size = 5120000;
     $extensionesvalidas = array("jpg", "png", "gif");
 
     if (isset($_FILES['imagen'])) {
@@ -42,20 +43,33 @@
         $extension = $arrayarchivo['extension'];
 
         if (!in_array($extension, $extensionesvalidas)) {
-            echo "La extensión no es válida";
+            echo "La extensión no es válida<br>";
             $errores = 1;
         }
 
         if ($filesize > $max_file_size) {
-            echo "La imagen excede el máximo tamaño permitido";
+            echo "La imagen excede el máximo tamaño permitido<br>";
             $errores = 1;
         }
 
         if ($errores == 0) {
             $nombreimagen = $directoriosubida . $nombrearchivo;
-            move_uploaded_file($directoriotemp, $nombreimagen);
+            $nombreimagen2 = $directoriosubida2 . $nombrearchivo;
+
+            // Mover la imagen al primer directorio
+            if (move_uploaded_file($directoriotemp, $nombreimagen)) {
+
+                // Copiar la imagen al segundo directorio
+                if (copy($nombreimagen, $nombreimagen2)) {
+                } else {
+                    echo "Error al copiar la imagen al directorio admin/imagen/<br>";
+                    error_log("Error al copiar la imagen a admin/imagen/: " . error_get_last()['message']);
+                }
+            } else {
+                echo "Error al mover la imagen al directorio imagen/<br>";
+                error_log("Error al mover la imagen a imagen/: " . error_get_last()['message']);
+            }
         }
-    }
 
     $sql_insert = "INSERT INTO equipos (nombre_equipo, localidad, dia_partido, hora_partido, color_equipacion, lugar_partido, correo, logo) VALUES ('$nombre', '$localidad', '$dia', '$hora', '$color', '$lugar', '$correo', '$nombreimagen')";
         if ($conexion->query($sql_insert) === TRUE) {
