@@ -28,7 +28,7 @@
 
     <?php
 
-    $sql_insert = "INSERT INTO partidos (jornada, nombre_equipo, dia, hora, visitante, lugar, resultados, cod_partido) VALUES ('$jornada', '$local', '$dia', '$hora', '$visitante', '$lugar', '', '')";
+    $sql_insert = "INSERT INTO partidos (jornada, nombre_equipo, dia, hora, visitante, lugar, resultados) VALUES ('$jornada', '$local', '$dia', '$hora', '$visitante', '$lugar', '')";
         if ($conexion->query($sql_insert) === TRUE) {
             echo "Datos insertados con éxito.";
         } else {
