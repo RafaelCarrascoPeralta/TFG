@@ -62,12 +62,12 @@
                 // Copiar la imagen al segundo directorio
                 if (copy($nombreimagen, $nombreimagen2)) {
                 } else {
-                    echo "Error al copiar la imagen al directorio admin/imagen/<br>";
-                    error_log("Error al copiar la imagen a admin/imagen/: " . error_get_last()['message']);
+                    echo "Error al copiar la imagen";
+                    error_log("Error al copiar la imagen: " . error_get_last()['message']);
                 }
             } else {
                 echo "Error al mover la imagen al directorio imagen/<br>";
-                error_log("Error al mover la imagen a imagen/: " . error_get_last()['message']);
+                error_log("Error al mover la imagen: " . error_get_last()['message']);
             }
         }
 
