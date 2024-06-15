@@ -1,5 +1,5 @@
 <?php
-    $servidor="3.230.147.215";
+    $servidor="44.222.67.253";
     $usuario="root";
     $passw="admin";
     $basededatos = "federacion";
