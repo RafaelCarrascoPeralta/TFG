@@ -23,14 +23,12 @@
         <table border=1>
             <thead>
                 <tr>
-                    <th>JORNADA</th>
                     <th>LOCAL</th>
                     <th>DIA</th>
                     <th>HORA</th>
                     <th>VISITANTE</th>
                     <th>LUGAR ENCUENTRO</th>
                     <th>RESULTADOS</th>
-                    <th>CODIGO PARTIDO</th>
                     </tr>
             </thead>
             <tbody>
@@ -47,14 +45,12 @@
 
         while ($registro = mysqli_fetch_row($resultado)) {
             echo "<tr>";
-            echo "<td>" . $registro[0] . "</td>";
             echo "<td>" . $registro[1] . "</td>";
             echo "<td>" . $registro[2] . "</td>";
             echo "<td>" . $registro[3] . "</td>";
             echo "<td>" . $registro[4] . "</td>";
             echo "<td>" . $registro[5] . "</td>";
             echo "<td>" . $registro[6] . "</td>";
-            echo "<td>" . $registro[7] . "</td>";
             echo "</tr>";
         }
         ?>
@@ -66,14 +62,12 @@
         <table border=1>
             <thead>
                 <tr>
-                    <th>JORNADA</th>
                     <th>LOCAL</th>
                     <th>DIA</th>
                     <th>HORA</th>
                     <th>VISITANTE</th>
                     <th>LUGAR ENCUENTRO</th>
                     <th>RESULTADOS</th>
-                    <th>CODIGO PARTIDO</th>
                     </tr>
             </thead>
             <tbody>
@@ -88,14 +82,12 @@
 
         while ($registro = mysqli_fetch_row($resultado)) {
             echo "<tr>";
-            echo "<td>" . $registro[0] . "</td>";
             echo "<td>" . $registro[1] . "</td>";
             echo "<td>" . $registro[2] . "</td>";
             echo "<td>" . $registro[3] . "</td>";
             echo "<td>" . $registro[4] . "</td>";
             echo "<td>" . $registro[5] . "</td>";
             echo "<td>" . $registro[6] . "</td>";
-            echo "<td>" . $registro[7] . "</td>";
             echo "</tr>";
         }
         ?>
@@ -107,14 +99,12 @@
         <table border=1>
             <thead>
                 <tr>
-                    <th>JORNADA</th>
                     <th>LOCAL</th>
                     <th>DIA</th>
                     <th>HORA</th>
                     <th>VISITANTE</th>
                     <th>LUGAR ENCUENTRO</th>
                     <th>RESULTADOS</th>
-                    <th>CODIGO PARTIDO</th>
                     </tr>
             </thead>
             <tbody>
@@ -129,14 +119,12 @@
 
         while ($registro = mysqli_fetch_row($resultado)) {
             echo "<tr>";
-            echo "<td>" . $registro[0] . "</td>";
             echo "<td>" . $registro[1] . "</td>";
             echo "<td>" . $registro[2] . "</td>";
             echo "<td>" . $registro[3] . "</td>";
             echo "<td>" . $registro[4] . "</td>";
             echo "<td>" . $registro[5] . "</td>";
             echo "<td>" . $registro[6] . "</td>";
-            echo "<td>" . $registro[7] . "</td>";
             echo "</tr>";
         }
         ?>
@@ -148,14 +136,12 @@
         <table border=1>
             <thead>
                 <tr>
-                    <th>JORNADA</th>
                     <th>LOCAL</th>
                     <th>DIA</th>
                     <th>HORA</th>
                     <th>VISITANTE</th>
                     <th>LUGAR ENCUENTRO</th>
                     <th>RESULTADOS</th>
-                    <th>CODIGO PARTIDO</th>
                     </tr>
             </thead>
             <tbody>
@@ -170,14 +156,12 @@
 
         while ($registro = mysqli_fetch_row($resultado)) {
             echo "<tr>";
-            echo "<td>" . $registro[0] . "</td>";
             echo "<td>" . $registro[1] . "</td>";
             echo "<td>" . $registro[2] . "</td>";
             echo "<td>" . $registro[3] . "</td>";
             echo "<td>" . $registro[4] . "</td>";
             echo "<td>" . $registro[5] . "</td>";
             echo "<td>" . $registro[6] . "</td>";
-            echo "<td>" . $registro[7] . "</td>";
             echo "</tr>";
         }
         ?>
@@ -189,14 +173,12 @@
         <table border=1>
             <thead>
                 <tr>
-                    <th>JORNADA</th>
                     <th>LOCAL</th>
                     <th>DIA</th>
                     <th>HORA</th>
                     <th>VISITANTE</th>
                     <th>LUGAR ENCUENTRO</th>
                     <th>RESULTADOS</th>
-                    <th>CODIGO PARTIDO</th>
                     </tr>
             </thead>
             <tbody>
@@ -211,14 +193,12 @@
 
         while ($registro = mysqli_fetch_row($resultado)) {
             echo "<tr>";
-            echo "<td>" . $registro[0] . "</td>";
             echo "<td>" . $registro[1] . "</td>";
             echo "<td>" . $registro[2] . "</td>";
             echo "<td>" . $registro[3] . "</td>";
             echo "<td>" . $registro[4] . "</td>";
             echo "<td>" . $registro[5] . "</td>";
             echo "<td>" . $registro[6] . "</td>";
-            echo "<td>" . $registro[7] . "</td>";
             echo "</tr>";
         }
         ?>
