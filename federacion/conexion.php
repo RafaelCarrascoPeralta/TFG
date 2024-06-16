@@ -1,5 +1,5 @@
 <?php
-    $servidor="mysql-service";
+    $servidor="54.156.136.226";
     $usuario="root";
     $passw="admin";
     $basededatos = "federacion";
